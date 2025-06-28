@@ -1,0 +1,326 @@
+/* Main background and font */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f8fb;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+    font-size: 1.6rem; /* Even larger base font size */
+}
+
+/* Header and company info */
+h1, h2, h3, h4 {
+    color: #2d3e50;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.7rem;
+}
+
+b {
+    font-size: 1.5rem;
+    color: #00796b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+th {
+    background: linear-gradient(90deg, #b2dfdb 0%, #e0f7fa 100%);
+    color: #00695c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    vertical-align: top;
+    font-size: 1.3rem;
+}
+
+tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+tr.data-row:hover td {
+    background: #e0f2f1;
+}
+
+/* Subtotal, VAT, etc. */
+#sub-total td,
+#bottom-line td,
+tfoot tr td {
+    background: #f0f4f8;
+    font-weight: bold;
+    color: #2d3e50;
+    font-size: 1.3rem;
+}
+
+#sub-total {
+    border-top: 2px solid #00796b;
+}
+
+#bottom-line {
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, #26a69a 0%, #80cbc4 100%);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 18px 36px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    font-size: 1.5rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #00796b 0%, #26a69a 100%);
+    color: #fff;
+}
+
+button.close {
+    color: #888;
+    font-size: 2.5rem;
+}
+
+button.close:hover {
+    color: #00796b;
+}
+
+/* Modal styling */
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-size: 1.4rem;
+}
+
+.modal-header {
+    background: #e0f2f1;
+    border-bottom: 1px solid #b2dfdb;
+}
+
+.modal-title {
+    color: #00796b;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.modal-footer {
+    background: #f0f4f8;
+    border-top: 1px solid #b2dfdb;
+}
+
+/* Miscellaneous */
+.cen, .thick {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #888;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive columns for customer/ship to/date */
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+    .col-sm-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 0 24px;
+    }
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 24px;
+    }
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 24px;
+    }
+}
+
+/* Utility classes */
+.r {
+    text-align: right;
+}
+.colo {
+    color: #00796b;
+    font-weight: bold;
+}
+.tab {
+    margin-left: 30px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 90%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input[type="text"], input[type="number"] {
+    font-size: 1.4rem;
+    padding: 12px 16px;
+}
+
+.btn {
+    padding: 18px 36px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Highlight the info row above the Add Item button */
+.info-row {
+    background: linear-gradient(90deg, #e0f7fa 0%, #b2dfdb 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(38, 166, 154, 0.08);
+    padding: 10px 10px 8px 10px; /* Reduced padding */
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;                    /* Reduced gap */
+}
+
+/* Make column names pop */
+.info-row h3 {
+    font-size: 2rem;
+    color: #00796b;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px #b2dfdb;
+    text-transform: uppercase;
+}
+
+.info-row b {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.info-row span, .info-row h4 {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.info-row h4 {
+    font-weight: bold;
+    color: #00695c;
+    margin-top: 24px;
+    text-align: right;
+}
+
+/* Optional: Add a border to each column for separation */
+.info-row > div {
+    border-right: 1px solid #b2dfdb; /* Change 2px or higher to 1px */
+    padding-right: 18px;
+}
+.info-row > div:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.header-row {
+    background: linear-gradient(90deg, #fffde7 0%, #b2ebf2 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(38, 166, 154, 0.10);
+    padding: 4px 4px 2px 4px; 
+    margin-bottom: 10px !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;                  
+    border: 2px solid #b2dfdb;
+}
+
+.header-row h2 {
+    font-size: 2rem;
+    color: #00796b;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 8px #b2dfdb;
+    text-transform: uppercase;
+}
+
+.header-row h1 {
+    font-size: 3rem;
+    color: #004d40;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px #b2dfdb;
+}
+
+.header-row p, .header-row span {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: 500;
+}
+
+.header-row img {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 155px !important;     /* Smaller logo */
+    height: 120px !important;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.btn,
+.btn-primary {
+    padding: 8px 25px !important;
+    font-size: 1.1rem !important;
+    border-radius: 6px;
+}
