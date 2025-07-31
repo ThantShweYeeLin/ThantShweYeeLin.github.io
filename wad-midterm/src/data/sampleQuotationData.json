@@ -1,0 +1,22 @@
+{
+  "quotationItems": [
+    {
+      "item": "Product A",
+      "ppu": 100,
+      "qty": 2,
+      "discount": 10
+    },
+    {
+      "item": "Product B",
+      "ppu": 200,
+      "qty": 1,
+      "discount": 25
+    },
+    {
+      "item": "Product C",
+      "ppu": 150,
+      "qty": 3,
+      "discount": 0
+    }
+  ]
+}
